@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBondhu – Profile</title>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+  <link rel="stylesheet" href="profile.css"/>
+  <script defer src="../assets/utils.js"></script>
+  <script defer src="profile.js"></script>
+</head>
+<body>
+  <header class="sb-header">
+    <div class="brand">StudyBondhu</div>
+    <nav class="sb-nav">
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+      <a href="../groups/my-groups.html">My Groups</a>
+      <a href="../groups/join-group.html">Join New Group</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-3d">
+      <h2>Profile</h2>
+
+      <!-- ✅ Profile Picture Upload -->
+      <div style="margin-bottom: 20px;">
+        <label>Profile Picture</label><br/>
+        <input type="file" id="pfPicInput" accept="image/*"/>
+        <div style="margin-top:10px;">
+          <img id="pfPicPreview" src="" alt="Preview" 
+               style="max-width:120px; border-radius:12px; display:none;"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Name</label>
+          <input id="pfName" type="text"/>
+        </div>
+        <div>
+          <label>Email</label>
+          <input id="pfEmail" type="email" disabled/>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button id="pfSave" class="btn btn-primary">Save</button>
+        <button id="pfLogout" class="btn btn-secondary">Logout</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sb-footer">
+    <small>© 2025 StudyBondhu</small>
+  </footer>
+</body>
+</html>
+

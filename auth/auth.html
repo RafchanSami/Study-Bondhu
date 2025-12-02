@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBondhu – Auth</title>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+  <link rel="stylesheet" href="auth.css"/>
+  <script defer src="../assets/utils.js"></script>
+  <script defer src="auth.js"></script>
+</head>
+<body>
+  <header class="sb-header">
+    <div class="brand">StudyBondhu</div>
+    <nav class="sb-nav">
+      <a href="../index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="auth card-3d">
+      <h2>Signup/Login</h2>
+      <p class="muted">Login or create an account to continue.</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="login">Alrady have a account</button>
+        <button class="tab-btn" data-tab="signup">Sign up</button>
+      </div>
+
+      <div class="tab-content" id="login">
+        <div class="row">
+          <div>
+            <label>Email</label>
+            <input id="login-email" type="email" placeholder="you@example.com"/>
+          </div>
+          <div>
+            <label>Password</label>
+            <input id="login-pass" type="password" placeholder="••••••••"/>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button id="login-btn" class="btn btn-primary">Login</button>
+        </div>
+      </div>
+
+      <div class="tab-content hidden" id="signup">
+        <div class="row">
+          <div>
+            <label>Name</label>
+            <input id="signup-name" type="text" placeholder="Your name"/>
+          </div>
+                  </div>
+        <div class="row">
+          <div>
+            <label>School / Univarsity Name</label>
+            <input id="signup-School / Univarsity Name" type="School / Univarsity Name" placeholder="Your School / Univarsity name"/>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+          <div>
+            <label>Email</label>
+            <input id="signup-email" type="email" placeholder="you@example.com"/>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label>Password</label>
+            <input id="signup-pass" type="password" placeholder="Create a password"/>
+          </div>
+          <div>
+            <label>Confirm Password</label>
+            <input id="signup-pass2" type="password" placeholder="Repeat password"/>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button id="signup-btn" class="btn btn-primary">Create account</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sb-footer">
+    <small>© 2025 Study Bondhu</small>
+  </footer>
+</body>
+</html>

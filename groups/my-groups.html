@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBondhu – My Groups</title>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+  <link rel="stylesheet" href="my-groups.css"/>
+  <script defer src="../assets/utils.js"></script>
+  <script defer src="my-groups.js"></script>
+</head>
+<body>
+  <header class="sb-header">
+    <div class="brand">StudyBondhu</div>
+    <nav class="sb-nav">
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+      <a href="join-group.html">Join New Group</a>
+      <a href="../profile/profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-3d">
+      <div class="row">
+        <div>
+          <h2>My Groups</h2>
+          <p class="muted">Create and manage your study groups.</p>
+        </div>
+        <div style="text-align:right;">
+          <button id="openCreateModal" class="btn btn-primary">Create Group</button>
+        </div>
+      </div>
+      <div id="myGroupsList" class="list" style="margin-top: 12px;"></div>
+    </section>
+  </main>
+
+  <!-- Create group modal -->
+  <div class="modal-backdrop" id="createModalBackdrop">
+    <div class="modal">
+      <h3>Create a new group</h3>
+      <div class="row">
+        <div>
+          <label>Group name</label>
+          <input id="cgName" type="text" placeholder="e.g. Calculus Study Circle"/>
+        </div>
+        <div>
+          <label>Subject</label>
+          <input id="cgSubject" type="text" placeholder="e.g. Math"/>
+        </div>
+      </div>
+      <div style="margin-top:10px;">
+        <label>
+          <input id="cgPublic" type="checkbox" checked/> Public group
+        </label>
+        <p class="muted">Public groups are discoverable in Join New Group.</p>
+      </div>
+      <div class="modal-actions">
+        <button id="cgCancel" class="btn btn-secondary">Cancel</button>
+        <button id="cgCreate" class="btn btn-primary">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="sb-footer">
+    <small>© 2025 StudyBondhu</small>
+  </footer>
+</body>
+</html>

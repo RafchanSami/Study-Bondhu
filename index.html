@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBondhu</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="assets/utils.js"></script>
+  <style>
+    .popup {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 9999;
+      max-width: 300px;
+      font-family: sans-serif;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .popup h3 {
+      margin-top: 0;
+    }
+    .popup button {
+      margin-top: 10px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header class="sb-header">
+    <div class="brand">StudyBondhu</div>
+    <nav class="sb-nav">
+      <a href="auth/auth.html">Sign up/Login</a>
+    </nav>
+  </header>
+
+  <!-- 👩‍💻 Author Popup -->
+  <div class="popup" id="authorPopup">
+    <h3>👩‍💻 Devloper</h3>
+    <p>
+
+Welcome to **StudyBondhu** — a collaborative group study platform designed to    students.
+ 
+           My name is   <strong>Sadiya Hossain</strong><br>
+           I'm a developer.I created this app for student.
+    </p>
+    <button onclick="document.getElementById('authorPopup').style.display='none'">Close</button>
+  </div>
+
+  <main class="container">
+    <section class="hero card-3d">
+      <h1>Welcome to StudyBondhu</h1>
+      <p>Organize group studies, share materials, and learn together.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="auth/auth.html">Get Started</a>
+        <a class="btn btn-secondary" href="dashboard/dashboard.html">Go to Dashboard</a>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card card-3d">
+        <h3>My Groups</h3>
+        <p>Create, manage, and enter your study groups.</p>
+        <a class="btn btn-link" href="groups/my-groups.html"></a>
+      </div>
+      <div class="card card-3d">
+        <h3>Join New Group</h3>
+        <p>Find groups by code or browse public ones.</p>
+        <a class="btn btn-link" href="groups/join-group.html"></a>
+      </div>
+      <div class="card card-3d">
+        <h3>Dashboard</h3>
+        <p>Upcoming sessions and quick actions.</p>
+        <a class="btn btn-link" href="dashboard/dashboard.html"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sb-footer">
+    <small>© 2025 StudyBondhu</small>
+  </footer>
+</body>
+</html>

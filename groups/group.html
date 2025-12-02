@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBondhu – Group</title>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+  <link rel="stylesheet" href="group.css"/>
+  <script defer src="../assets/utils.js"></script>
+  <script defer src="group.js"></script>
+</head>
+<body>
+  <header class="sb-header">
+    <div class="brand">StudyBondhu</div>
+    <nav class="sb-nav">
+      <a href="my-groups.html">My Groups</a>
+      <a href="join-group.html">Join New Group</a>
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-3d">
+      <div id="groupHeader">
+        <h2 id="groupName">Group</h2>
+        <p class="muted" id="groupMeta"></p>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="chat">Group Chat</button>
+        <button class="tab-btn" data-tab="materials">Study Materials</button>
+        <button class="tab-btn" data-tab="whiteboard">Whiteboard</button>
+        <button class="tab-btn" data-tab="video">Video Call</button>
+        <button class="tab-btn" data-tab="schedule">Schedule</button>
+      </div>
+
+      <!-- Chat -->
+      <div class="tab-content" id="chat">
+        <div id="chatList" class="list" style="max-height: 260px; overflow:auto; margin-bottom: 10px;"></div>
+        <div class="row">
+          <input id="chatInput" placeholder="Write a message"/>
+          <button id="chatSend" class="btn btn-primary">Send</button>
+        </div>
+      </div>
+
+      <!-- Materials -->
+      <div class="tab-content hidden" id="materials">
+        <div id="materialsList" class="list"></div>
+        <div class="row" style="margin-top:10px;">
+          <input id="matTitle" placeholder="Material title"/>
+          <input id="matLink" placeholder="Link or note"/>
+        </div>
+        <div class="modal-actions">
+          <button id="matAdd" class="btn btn-primary">Add material</button>
+        </div>
+      </div>
+
+      <!-- Whiteboard -->
+      <div class="tab-content hidden" id="whiteboard">
+        <canvas id="board" width="600" height="340" style="background:#fff; border-radius:12px; box-shadow: var(--shadow-card);"></canvas>
+        <div class="modal-actions">
+          <button id="wbClear" class="btn btn-secondary">Clear</button>
+        </div>
+      </div>
+
+<!-- Video -->
+<div class="tab-content hidden" id="video">
+  <div class="card card-3d">
+    <h4>Group Video Call</h4>
+    <button id="videoStart" class="btn btn-primary">Start Video Call</button>
+  </div>
+
+  <!-- এখানে Zego UI রেন্ডার হবে -->
+  <div id="root" style="width:100%; height:500px; margin-top:15px;"></div>
+</div>
+  
+<!-- Zego SDK -->
+<script src="https://unpkg.com/@zegocloud/zego-uikit-prebuilt/zego-uikit-prebuilt.js"></script>
+
+
+
+<!-- Schedule -->
+<div class="tab-content hidden" id="schedule">
+  <div id="scheduleList" class="list"></div>
+
+  <div class="row" style="margin-top:10px;">
+    <input id="sessTitle" placeholder="Session title"/>
+    <input id="sessWhen" placeholder="Time (e.g. Wed 5:30 PM)"/>
+  </div>
+
+  <div class="modal-actions">
+    <button id="sessAdd" class="btn btn-primary">Add session</button>
+  </div>
+</div>
+
+    <small>© 2025 StudyBondhu</small>
+  </footer>
+</body>
+</html>

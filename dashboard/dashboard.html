@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBondhu – Dashboard</title>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
+  <script defer src="../assets/utils.js"></script>
+  <script defer src="dashboard.js"></script>
+</head>
+<body>
+  <header class="sb-header">
+    <div class="brand">StudyBondhu</div>
+    <nav class="sb-nav">
+      <a href="../groups/my-groups.html">My Groups</a>
+      <a href="../groups/join-group.html">Join New Group</a>
+      <!-- ✅ Profile picture instead of text -->
+      <a href="../profile/profile.html" class="profile-link" title="Profile">
+        <img id="navProfilePic" 
+             src="../assets/unknown.png" 
+             alt="Profile" 
+             style="width:32px; height:32px; border-radius:50%; object-fit:cover;"/>
+      </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Dashboard</h2>
+
+    <section class="row">
+      <div class="card card-3d">
+        <h3>My Groups</h3>
+        <div id="myGroupsList" class="list"></div>
+        <div class="modal-actions">
+          <a class="btn btn-secondary" href="../groups/my-groups.html">Manage</a>
+        </div>
+      </div>
+      <div class="card card-3d">
+        <h3>Join New Group</h3>
+        <p>Use a code or browse public groups.</p>
+        <div class="row">
+          <input id="dashJoinCode" placeholder="Enter group code e.g. ENG456"/>
+          <button id="dashJoinBtn" class="btn btn-primary">Join</button>
+        </div>
+        <div class="modal-actions">
+          <a class="btn btn-secondary" href="../groups/join-group.html">Browse</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 20px;" class="card card-3d">
+      <h3>Upcoming Sessions</h3>
+      <ul id="upcomingSessions" class="list"></ul>
+    </section>
+  </main>
+
+  <footer class="sb-footer">
+    <small>© 2025 StudyBondhu   </small>
+  </footer>
+</body>
+</html>

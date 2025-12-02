@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBondhu – Join New Group</title>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+  <link rel="stylesheet" href="join-group.css"/>
+  <script defer src="../assets/utils.js"></script>
+  <script defer src="join-group.js"></script>
+</head>
+<body>
+  <header class="sb-header">
+    <div class="brand">StudyBondhu</div>
+    <nav class="sb-nav">
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+      <a href="my-groups.html">My Groups</a>
+      <a href="../profile/profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-3d">
+      <h2>Join New Group</h2>
+      <p class="muted">Use a code or browse public groups.</p>
+
+      <div class="card" style="margin: 12px 0;">
+        <h3>Join by code</h3>
+        <div class="row">
+          <input id="codeInput" placeholder="e.g. ALG123"/>
+          <button id="joinByCodeBtn" class="btn btn-primary">Join</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Browse public groups</h3>
+        <div class="row" style="margin-bottom: 10px;">
+          <input id="searchInput" placeholder="Filter by name or subject"/>
+          <select id="subjectFilter">
+            <option value="">All subjects</option>
+            <option>Math</option>
+            <option>English</option>
+            <option>Science</option>
+          </select>
+        </div>
+        <div id="publicList" class="list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sb-footer">
+    <small>© 2025 StudyBondhu</small>
+  </footer>
+</body>
+</html>

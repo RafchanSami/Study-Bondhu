@@ -1,0 +1,6 @@
+/* Minimal additional styles */
+#pfPicPreview {
+  box-shadow: var(--shadow-card);
+  margin-top: 8px;
+}
+

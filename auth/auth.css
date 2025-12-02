@@ -1,0 +1,9 @@
+.auth h2 { margin-top: 0; }
+.muted { color: var(--muted); }
+
+.tabs { display: flex; gap: 8px; margin: 12px 0 18px; }
+.tab-btn {
+  padding: 8px 12px; border-radius: 10px; border: 1px solid #e2e8f0; background: var(--bg-elev);
+}
+.tab-btn.active { background: var(--primary-ghost); color: var(--primary); border-color: var(--primary); }
+.tab-content.hidden { display: none; }
